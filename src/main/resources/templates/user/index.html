@@ -1,723 +1,592 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
-  <title>Nhà Sách Số 1 VN</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Trang Sách Số 1 VN</title>
+<!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <!-- css and fonts tag -->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/fonts/themify-icons-font/themify-icons/themify-icons.css">
+<!-- css and fonts tag -->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet"
+	href="/fonts/themify-icons-font/themify-icons/themify-icons.css">
 
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+<!-- Bootstrap CSS v5.2.1 -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+	crossorigin="anonymous" />
 </head>
 
 <body>
-  <header>
-    <div class="container-fluid p-0 position-relative">
+	<header>
+		<div class="container-fluid p-0 position-relative">
 
-      <nav class="navbar my-navbar navbar-expand-lg navbar-light position-fixed" id="my-navbar" style="width: 100%">
-        <div class="container-fluid">
-          <a href="">Logo</a>
-          <button class="navbar-toggler border-0" style="box-shadow: none;" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="ti-menu"></i>
-          </button>
-          <div class="collapse w-75 dropMenuBarWraper navbar-collapse" style="flex-grow: 0; justify-content: flex-end;"
-            id="navbarSupportedContent">
-            <ul class="navbar-nav dropMenuBar mb-lg-0">
-              <form class="d-flex searchForm position-relative">
-                <input class="form-control header-input me-5" style="padding: 10px" type="search" placeholder="Search"
-                  aria-label="Search" />
-                <button class="btn searchBtn btn-outline-success position-absolute fixed-search-button" type="submit">
-                  <i class="ti-search"></i>
-                </button>
-              </form>
-              <li class="nav-item">
-                <a class="nav-link" style="font-weight: 600" aria-current="page" href="#">
-                  <i class="ti-bell"></i>
-                  Notification</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" style="font-weight: 600" href="#">
-                  <i class="ti-shopping-cart"></i>
-                  Cart</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="font-weight: 600" href="#" id="navbarDropdown" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="ti-archive"></i>
-                  Category
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" style="font-weight: 600" href="#">Action</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" style="font-weight: 600" href="#">Another action</a>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" style="font-weight: 600" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" style="font-weight: 600" href="#">
-                  <i class="ti-user"></i>
-                  Account
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-
-      <nav class="navbar header-nav navbar-expand-lg navbar-light  px-5" id="header-navbar">
-        <div class="container-fluid px-5">
-          <div class="container-fluid d-flex p-3 m-0 w-100 justify-content-between align-items-center">
-            <a class="navbar-brand p-1 m-1 me-md-5 pe-md-5" href="#">Logo</a>
-
-            <div class="collapse navbar-collapse search-container" id="navbarSupportedContent1">
-
-              <form class="d-flex header-menu-search">
-                <input class="form-control header-input rounded-0" type="search" placeholder="Search"
-                  aria-label="Search">
-                <button class="btn btn-outline-success rounded-0 header-search-button" type="submit">Search</button>
-              </form>
-              <i class="ti-user nav-item" style="font-weight: 900;"></i>
-            </div>
-            <button class="navbar-toggler border-0" style="box-shadow: none;" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <i class="ti-menu"></i>
-            </button>
+			<nav
+				class="navbar my-navbar navbar-expand-lg navbar-light position-fixed"
+				id="my-navbar" style="width: 100%">
+				<div class="container-fluid">
+					<a href="/index/home">Logo</a>
+					<button class="navbar-toggler text-white border-0"
+						style="box-shadow: none;" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<i class="ti-menu"></i>
+					</button>
+					<div class="collapse w-75 dropMenuBarWraper navbar-collapse"
+						style="flex-grow: 0; justify-content: flex-end;"
+						id="navbarSupportedContent">
+						<ul class="navbar-nav dropMenuBar mb-lg-0">
+						
+							<form th:action="@{/index/home}" class="d-flex searchForm position-relative" method="get">
+								<input class="form-control header-input me-5" th:name="searchInput"
+									style="padding: 10px" type="search" placeholder="Search Your Book" aria-label="Search" />
+								<button
+									class="btn searchBtn-fixed position-absolute fixed-search-button"
+									formaction="/book/1">
+									<i class="ti-search"></i>
+								</button>
+							</form>
+							
+							<li class="nav-item-fixed"><a class="nav-link"
+								style="font-weight: 600" aria-current="page" href="#"> <i
+									class="ti-bell"></i> Notification
+							</a></li>
+							<li class="nav-item-fixed"><a class="nav-link"
+								style="font-weight: 600" href="#"> <i
+									class="ti-shopping-cart"></i> Cart
+							</a></li>
+							<li class="nav-item-fixed dropdown"><a
+								class="nav-link dropdown-toggle" style="font-weight: 600"
+								href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false"> <i
+									class="ti-archive"></i> Category
+							</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item" style="font-weight: 600"
+										href="#">Action</a></li>
+									<li><a class="dropdown-item" style="font-weight: 600"
+										href="#">Another action</a></li>
+									<li>
+										<hr class="dropdown-divider" />
+									</li>
+									<li><a class="dropdown-item" style="font-weight: 600"
+										href="#">Something else here</a></li>
+								</ul></li>
+							<li class="nav-item-fixed"><a class="nav-link"
+								style="font-weight: 600" href="#"> <i class="ti-user"></i>
+									Account
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 
 
-          </div>
-          <hr width="100%">
+			<nav class="navbar header-nav navbar-expand-lg navbar-light  px-5"
+				id="header-navbar">
+				<div class="container-fluid px-5">
+					<div
+						class="container-fluid d-flex p-3 m-0 w-100 justify-content-between align-items-center">
+						<a class="navbar-brand p-1 m-1 me-md-5 pe-md-5" href="/index/home">Logo</a>
+
+						<div class="collapse navbar-collapse search-container"
+							id="navbarSupportedContent1">
+
+							<form th:action="@{/index/home}" class="d-flex header-menu-search" method="get">
+								<input class="form-control header-input rounded-0" type="search"
+									placeholder="Search" aria-label="Search" name="keyword">
+								<button
+									class="btn btn-outline-success rounded-0 header-search-button"
+									type="submit"
+									formaction="/book/querySearch/1"
+									formmethod="get" 
+								>
+									Search
+								</button>
+							</form>
+														
+							<i class="ti-user nav-item" style="font-weight: 900;"></i>
+						</div>
+						<button class="navbar-toggler border-0" style="box-shadow: none;"
+							type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent1"
+							aria-controls="navbarSupportedContent" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<i class="ti-menu"></i>
+						</button>
 
 
-          <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-              <ul class="navbar-nav navbar-menu me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Notification</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Shop
-                  </a>
-                  <ul class="dropdown-menu " style="top: 108%;left: -175%;width: 1032px;"
-                    aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Cart</a>
-                </li>
-              </ul>
-
-            </div>
-          </div>
-
-        </div>
-      </nav>
-
-      <div class="slider">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators" style="z-index: 1">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" style="max-height: 500px">
-              <img src="/user/img/banner1.jpg" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block" style="right: 40%; top: 56%; z-index: 1">
-                <!-- <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-                <div class="buyBtnForm position-absolute" style="top: 45%; left: 60%">
-                  <button class="buySuggest">Buy Now</button>
-                  <i class="buySuggesticon ti-angle-right"></i>
-                </div> -->
-              </div>
-            </div>
-            <div class="carousel-item" style="max-height: 500px">
-              <img src="/user/img/banner2.jpeg" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block" style="right: 40%; top: 56%; z-index: 1">
-                <!-- <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second
-                  slide.
-                </p>
-                <div class="buyBtnForm position-absolute" style="top: 45%; left: 60%">
-                  <button class="buySuggest">Buy Now</button>
-                  <i class="buySuggesticon ti-angle-right"></i>
-                </div> -->
-              </div>
-            </div>
-
-            <div class="carousel-item" style="max-height: 500px">
-              <img src="/user/img/banner3.jpg" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block" style="right: 40%; top: 56%; z-index: 1">
-                <!-- <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
-                <div class="buyBtnForm position-absolute" style="top: 45%; left: 60%">
-                  <button class="buySuggest">Buy Now</button>
-                  <i class="buySuggesticon ti-angle-right"></i>
-                </div> -->
-              </div>
-            </div>
-            <!-- <div class="overlay position-absolute"></div> -->
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid p-0 mt-2">
-      <div class="subbanner">
-        <img src="/user/img/subbaner.jpg" class="w-100" alt="" />
-      </div>
-    </div>
-  </header>
-  <main style="overflow: hidden;">
-    <section>
-      <div class="container-fluid p-0 m-3">
+					</div>
+					<hr width="100%">
 
 
-        <div class="container pb-5 crossSection position-relative">
-          <button class="pre-btn">
-            <i class="ti-angle-left"></i>
-          </button>
+					<div class="container-fluid">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+							<ul class="navbar-nav navbar-menu me-auto mb-2 mb-lg-0">
+								<li class="nav-item"><a class="nav-link"
+									aria-current="page" href="/index/home">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">Notification</a>
+								</li>
+								<li class="nav-item dropdown"><a
+									class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Shop </a>
+									<ul class="dropdown-menu "
+										style="top: 108%; left: -175%; width: 1032px;"
+										aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li>
+											<hr class="dropdown-divider">
+										</li>
+										<li><a class="dropdown-item" href="#">Something else
+												here</a></li>
+									</ul></li>
+								<li class="nav-item"><a class="nav-link" href="#">Cart</a>
+								</li>
+							</ul>
 
-          <button class="nxt-btn">
-            <i class="ti-angle-right"></i>
-          </button>
-          <div class="row align-items-center" style="background-color: #93c7cd">
-            <div class="col-lg-8 col-md-8 col-sm-8">
-              <div class="section-title my-3">
-                <h4>Trending Now</h4>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-              <div class="btn__all">
-                <a href="#" class="primary-btn">View All <span class="ti-shift-right"></span></a>
-              </div>
-            </div>
-          </div>
-          <div class="product-container h-100">
-            <div class="product-card">
-              <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="images/card1.jpg" class="product-thumb" alt="" />
-                <button class="card-btn">add to wishlist</button>
-              </div>
-              <div class="product-info">
-                <h2 class="product-brand">brand</h2>
-                <p class="product-short-description">
-                  a short line about the cloth..
-                </p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="images/card2.jpg" class="product-thumb" alt="" />
-                <button class="card-btn">add to wishlist</button>
-              </div>
-              <div class="product-info">
-                <h2 class="product-brand">brand</h2>
-                <p class="product-short-description">
-                  a short line about the cloth..
-                </p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="/user/card3.jpg" class="product-thumb" alt="" />
-                <button class="card-btn">add to wishlist</button>
-              </div>
-              <div class="product-info">
-                <h2 class="product-brand">brand</h2>
-                <p class="product-short-description">
-                  a short line about the cloth..
-                </p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="images/card4.jpg" class="product-thumb" alt="" />
-                <button class="card-btn">add to wishlist</button>
-              </div>
-              <div class="product-info">
-                <h2 class="product-brand">brand</h2>
-                <p class="product-short-description">
-                  a short line about the cloth..
-                </p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="images/card5.jpg" class="product-thumb" alt="" />
-                <button class="card-btn">add to wishlist</button>
-              </div>
-              <div class="product-info">
-                <h2 class="product-brand">brand</h2>
-                <p class="product-short-description">
-                  a short line about the cloth..
-                </p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="images/card6.jpg" class="product-thumb" alt="" />
-                <button class="card-btn">add to wishlist</button>
-              </div>
-              <div class="product-info">
-                <h2 class="product-brand">brand</h2>
-                <p class="product-short-description">
-                  a short line about the cloth..
-                </p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="images/card7.jpg" class="product-thumb" alt="" />
-                <button class="card-btn">add to wishlist</button>
-              </div>
-              <div class="product-info">
-                <h2 class="product-brand">brand</h2>
-                <p class="product-short-description">
-                  a short line about the cloth..
-                </p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="images/card8.jpg" class="product-thumb" alt="" />
-                <button class="card-btn">add to wishlist</button>
-              </div>
-              <div class="product-info">
-                <h2 class="product-brand">brand</h2>
-                <p class="product-short-description">
-                  a short line about the cloth..
-                </p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="images/card9.jpg" class="product-thumb" alt="" />
-                <button class="card-btn">add to wishlist</button>
-              </div>
-              <div class="product-info">
-                <h2 class="product-brand">brand</h2>
-                <p class="product-short-description">
-                  a short line about the cloth..
-                </p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-image">
-                <span class="discount-tag">50% off</span>
-                <img src="images/card10.jpg" class="product-thumb" alt="" />
-                <button class="card-btn">add to wishlist</button>
-              </div>
-              <div class="product-info">
-                <h2 class="product-brand">brand</h2>
-                <p class="product-short-description">
-                  a short line about the cloth..
-                </p>
-                <span class="price">$20</span><span class="actual-price">$40</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container-fluid p-0 m-3">
-        <div class="container pb-5 crossSection">
-          <!-- <div class="row align-items-center" style="background-color: #93c7cd">
-            <div class="col-lg-8 col-md-8 col-sm-8">
-              <div class="section-title my-3">
-                <h4>Trending Now</h4>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-              <div class="btn__all">
-                <a href="#" class="primary-btn">View All <span class="ti-shift-right"></span></a>
-              </div>
-            </div>
-          </div> -->
-          <div class="sectionBody  m-2 p-3">
-            <div class="row">
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-              <div class="col-2 col-lg-1 list">
-                <img class=" rounded-4 p-md-2" src="./assets/img/place1.jpg" alt="" />
-                Flash Sale
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+						</div>
+					</div>
 
-    <section>
-      <div class="container-fluid p-0 m-3">
-        <div class="container pb-5 crossSection">
-          <div class="row align-items-center" style="background-color: #93c7cd">
-            <div class="col-lg-8 col-md-8 col-sm-8">
-              <div class="section-title my-3">
-                <h4>best seller</h4>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-              <div class="btn__all">
-                <a href="#" class="primary-btn">View All <span class="ti-shift-right"></span></a>
-              </div>
-            </div>
-          </div>
+				</div>
+			</nav>
 
-          <div class="sectionBody overflow-hidden m-2">
-            <div class="row flex-nowrap">
-            	
-            	<th:block th:each="item : ${bestSellerBooks}">
-            	
-            		<div class="col-6 col-lg-3">
-                		<div class="product-card" style="margin: 0 auto;">
-                  			<div class="product-image">
-                   				<span class="discount-tag" th:text="${item.discount} + '% off'"></span>
-                    			<img th:src="${item.image}" class="product-thumb" alt="" />
-                    			<button class="card-btn">add to wishlist</button>
-                  			</div>
-                  			<div class="product-info">
-                    			<a th:href="@{|/index/book/${item.id}|}">See More Detail</a>
-                    			<p class="product-short-description" th:text="${item.name}">
-                      				
-                    			</p>
-                    			
-                    			
-                    			
-                    			<span class="price" th:text="${item.price - (item.price * item.discount / 100)} + 'đ'"></span><span class="actual-price" th:text="${item.price} + 'đ'"></span>
-                  			</div>
-                		</div>
-              		</div>
-            	
-            	</th:block>
-            
-              
-              
-              
-              <div class="col-6 col-lg-3">
-                <img class="w-100" src="./assets/img/place1.jpg" alt="" />
-              </div>
-              <div class="col-6 col-lg-3">
-                <img class="w-100" src="./assets/img/place1.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container-fluid p-0 m-3">
-        <div class="container pb-5 crossSection">
-          <!-- <div class="row align-items-center" style="background-color: #93c7cd">
-            <div class="col-lg-8 col-md-8 col-sm-8">
-              <div class="section-title my-3">
-                <h4>Trending Now</h4>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4">
-              <div class="btn__all">
-                <a href="#" class="primary-btn">View All <span class="ti-shift-right"></span></a>
-              </div>
-            </div>
-          </div> -->
-          <div class="sectionBody">
-            <div class="row">
-              <div class="col-6 pb-0 pt-2">
-                <img class="w-100" src="/user/img/place1.jpg" alt="" />
-              </div>
+			<div class="slider">
+				<div id="carouselExampleCaptions" class="carousel slide"
+					data-bs-ride="carousel">
+					<div class="carousel-indicators" style="z-index: 1">
+						<button type="button" data-bs-target="#carouselExampleCaptions"
+							data-bs-slide-to="0" class="active" aria-current="true"
+							aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions"
+							data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions"
+							data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active" style="max-height: 500px">
+							<img src="/img/banner1.jpg" class="d-block w-100" alt="..." />
+							<div class="carousel-caption d-none d-md-block"
+								style="right: 40%; top: 56%; z-index: 1">
+								
+							</div>
+						</div>
+						<div class="carousel-item" style="max-height: 500px">
+							<img src="/img/banner2.jpeg" class="d-block w-100" alt="..." />
+							<div class="carousel-caption d-none d-md-block"
+								style="right: 40%; top: 56%; z-index: 1">
+								
+							</div>
+						</div>
 
-              <div class="col-6">
-                <div class="subRightSection position-relative">
-                  <button class="pre-btn2"><i class="ti-angle-left"></i></button>
-                  <button class="nxt-btn2"><i class="ti-angle-right"></i></button>
-                  <div class="product-container2 position-relative">
-                    <div class="col-6 me-3 pb-0">
-                      <div class="product-card2">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                      <div class="product-card2 pt-3">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 me-3 pb-0">
-                      <div class="product-card2">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                      <div class="product-card2 pt-3 ">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 me-3 pb-0">
-                      <div class="product-card2">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                      <div class="product-card2 pt-3">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 me-3 pb-0">
-                      <div class="product-card2">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                      <div class="product-card2 pt-3">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 me-3 pb-0">
-                      <div class="product-card2">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                      <div class="product-card2 pt-3">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-6 me-3 pb-0">
-                      <div class="product-card2">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                      <div class="product-card2 pt-3">
-                        <div class="product-image" style="height: auto;">
-                          <span class="discount-tag">50% off</span>
-                          <img class="w-100" src="/user/img/place1.jpg " alt="" />
-                          <button class="card-btn">add to wishlist</button>
-                        </div>
-                      </div>
-                    </div>
+						<div class="carousel-item" style="max-height: 500px">
+							<img src="/img/banner3.jpg" class="d-block w-100" alt="..." />
+							<div class="carousel-caption d-none d-md-block"
+								style="right: 40%; top: 56%; z-index: 1">
+				
+							</div>
+						</div>
+						<!-- <div class="overlay position-absolute"></div> -->
+					</div>
+					<button class="carousel-control-prev" type="button"
+						data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+						<span class="" aria-hidden="true"></span> <span
+							class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button"
+						data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+						<span class="" aria-hidden="true"></span> <span
+							class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
 
-                  </div>
+		<div class="container-fluid p-0 mt-2">
+			<div class="subbanner">
+				<img src="/img/subbaner.jpg" class="w-100" alt="" />
+			</div>
+		</div>
+	</header>
+	<main style="overflow: hidden;">
+		<section>
+			<div class="container-fluid p-0 m-3">
 
 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <div class="container-fluid footer p-0">
-      <div class="row w-100 p-5">
-        <div class="col-3">
-          <div class="footer-logo ">
-            Logo
-          </div>
-          <p>Công Viên Phần Mềm Quang Trung Quận 12 TpHCM</p>
+				<div class="container pb-5 crossSection position-relative">
+					<button class="pre-btn">
+						<i class="ti-angle-left"></i>
+					</button>
 
-          <p>Nhận đặt hàng trực tuyến và giao hàng tận nơi.
-            KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại
-            văn phòng cũng như tất cả Hệ Thống trên toàn quốc
-          </p>
+					<button class="nxt-btn">
+						<i class="ti-angle-right"></i>
+					</button>
+					<div class="row align-items-center" style="background-color: #93c7cd">
+						<div class="col-lg-8 col-md-8 col-sm-8">
+							<div class="section-title my-3">
+								<h4>Trending Now</h4>
+							</div>
+						</div>
+						
+						<div class="col-lg-4 col-md-4 col-sm-4">
+							<div class="btn__all">
+								<a href="/book/querySearch?keyword=Trending" class="primary-btn">
+									View All 
+									<span class="ti-shift-right"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="product-container h-100 mt-3">
 
-          <div class="footer-contact">
-            <i class="ti-facebook"></i>
-            <i class="ti-instagram"></i>
-            <i class="ti-youtube"></i>
-            <i class="ti-twitter-alt"></i>
-            <i class="ti-pinterest"></i>
-          </div>
 
-        </div>
-        <div class="col-3 ">
-          <div class="footer-winget">
-            <div class="footer-label ps-3">
-              DỊCH VỤ
-              <ul class="footer-list">
-                <li><a href="">Điều khoản sử dụng</a></li>
-                <li><a href="">Giới thiệu</a></li>
-                <li><a href="">Hệ thống trung tâm - nhà sách</a></li>
-              </ul>
-            </div>
+						<th:block th:each="item : ${topTrendingBooks}">
 
-          </div>
+							<div class="product-card">
+								<div class="product-image">
+								<span class="discount-tag" th:text="${item.discount} + '%'"></span>
+								 <img th:src="${item.image}" class="product-thumb" alt="" />
+								<button class="card-btn">add to wishlist</button>
+								</div>
+								<div class="product-info">
+								<a class="product-brand" th:href="@{|/book/${item.id}|}">See More Detail</a>
+								<p class="product-short-description" th:text="${item.name}"></p>
+								<span class="price" th:if="${item.price >= 1000}" th:text="${item.price / 1000} + '.' + ${item.price % 10} + ${item.price % 100 / 10} + ${item.price % 1000 / 100} + 'đ'"></span>
+								<span class="actual-price" th:if="${item.price >= 1000}" th:text="${item.price / 1000} + '.' + ${item.price % 10} + ${item.price % 100 / 10} + ${item.price % 1000 / 100} + 'đ'"></span>
+								</div>
+							</div>
 
-        </div>
-        <div class="col-3">
-          <div class="footer-label ps-3">
-            HỖ TRỢ
+						</th:block>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container-fluid p-0 m-3">
+				<div class="container pb-5 crossSection">
+			
+					<div class="sectionBody  m-2 p-3">
+						<div class="row">
+							<div class="col-2 col-lg-1 list">
+								<img class=" rounded-4 p-md-2"
+									src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/Icon_FlashSale_Thuong_120x120.png"
+									alt="" /> Flash Sale
+							</div>
+							<div class="col-2 col-lg-1 list">
+								<img class=" rounded-4 p-md-2"
+									src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/Icon_MaGiamGia_8px_1.png"
+									alt="" /> Mã Giảm Giá
+							</div>
+							<div class="col-2 col-lg-1 list">
+								<img class=" rounded-4 p-md-2"
+									src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/Icon_XuHuong_Thuong_120x120.png"
+									alt="" /> Xu hướng
+							</div>
+							<div class="col-2 col-lg-1 list">
+								<img class=" rounded-4 p-md-2"
+									src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/Icon_SanPhamMoi_8px_1.png"
+									alt="" /> Sản Phẩm Mới
+							</div>
+							<div class="col-2 col-lg-1 list">
+								<img class=" rounded-4 p-md-2"
+									src="https://cdn0.fahasa.com/media/wysiwyg/Thang-06-2023/F3_HomepageT6.png"
+									alt="" /> Sale Thứ 3
+							</div>
+							<div class="col-2 col-lg-1 list">
+								<img class=" rounded-4 p-md-2"
+									src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/Icon_VanPhongPham_Th%C6%B0%C6%A1ng_120x120.png"
+									alt="" /> Văn Phòng Phẩm
+							</div>
+							<div class="col-2 col-lg-1 list">
+								<img class=" rounded-4 p-md-2"
+									src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/TamLyKyNang_50.png"
+									alt="" /> Tâm Lý Kỹ Năng
+							</div>
+							<div class="col-2 col-lg-1 list">
+								<img class=" rounded-4 p-md-2"
+									src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/Icon_MangaCommic_8px_1.png"
+									alt="" /> Manga - Comic
+							</div>
+							<div class="col-2 col-lg-1 list">
+								<img class=" rounded-4 p-md-2"
+									src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/Icon_PhienChoCu_8px_1.png"
+									alt="" /> Phiên Chợ Sách cũ
+							</div>
+							<div class="col-2 col-lg-1 list">
+								<img class=" rounded-4 p-md-2"
+									src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/Fahasasalethu3_Icon_logo_01.png"
+									alt="" /> Đinh Tị
+							</div>
 
-            <ul class="footer-list">
-              <li><a href="">Chính sách đổi - trả - hoàn tiền</a></li>
-              <li><a href="">Chính sách vận chuyển</a></li>
-              <li><a href="">Phương thức thanh toán và xuất HĐ</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="footer-label ps-3">
-            TÀI KHOẢN CỦA TÔI
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            <ul class="footer-list">
-              <li><a href="">Lịch sử mua hàng</a></li>
-              <li><a href="">Chi tiết tài khoản</a></li>
-              <li><a href="">Thay đổi địa chỉ khách hàng</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
+		<section>
+			<div class="container-fluid p-0 m-3">
+				<div class="container pb-5 crossSection">
+					<div class="row align-items-center"
+						style="background-color: #93c7cd">
+						<div class="col-lg-8 col-md-8 col-sm-8">
+							<div class="section-title my-3">
+								<h4>best seller</h4>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4">
+							<div class="btn__all">
+								<a href="#" class="primary-btn">View All <span
+									class="ti-shift-right"></span></a>
+							</div>
+						</div>
+					</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-    crossorigin="anonymous"></script>
-  <script>
+					<div class="sectionBody overflow-hidden m-2">
+						<div class="row flex-nowrap">
+
+							<th:block th:each="item : ${bestSellerBooks}">
+
+								<div class="col-6 col-lg-3">
+									<div class="product-card" style="margin: 0 auto;">
+										<div class="product-image">
+											<span class="discount-tag"
+												th:text="${item.discount} + '% off'"></span> <img
+												th:src="${item.image}" class="product-thumb" alt="" />
+											<button class="card-btn">add to wishlist</button>
+										</div>
+										<div class="product-info">
+											<a th:href="@{|/book/${item.id}|}">See More Detail</a>
+											<p class="product-short-description" th:text="${item.name}">
+
+											</p>
+
+
+
+											<span class="price" th:if="${item.price >= 1000}"
+												th:text="${item.price / 1000} + '.' + ${item.price % 10} + ${item.price % 100 / 10} + ${item.price % 1000 / 100} + 'đ'">
+											</span> <span class="actual-price" th:if="${item.price >= 1000}"
+												th:text="${item.price / 1000} + '.' + ${item.price % 10} + ${item.price % 100 / 10} + ${item.price % 1000 / 100} + 'đ'">
+											</span>
+										</div>
+									</div>
+								</div>
+
+							</th:block>
+
+
+							<div class="col-6 col-lg-3">
+								<img class="w-100" src="/img/place1.jpg" alt="" />
+							</div>
+							<div class="col-6 col-lg-3">
+								<img class="w-100" src="/img/place1.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container-fluid p-0 m-3">
+				<div class="container pb-5 crossSection">
+			
+					<div class="sectionBody">
+						<div class="row">
+							<div class="col-6 pb-0 pt-2">
+								<img class="w-100" src="/img/place1.jpg" alt="" />
+							</div>
+
+							<div class="col-6">
+								<div class="subRightSection position-relative">
+									<button class="pre-btn2">
+										<i class="ti-angle-left"></i>
+									</button>
+									<button class="nxt-btn2">
+										<i class="ti-angle-right"></i>
+									</button>
+									<div class="product-container2 position-relative">
+										<div class="col-6 me-3 pb-0">
+											<div class="product-card2">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+											<div class="product-card2 pt-3">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 me-3 pb-0">
+											<div class="product-card2">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+											<div class="product-card2 pt-3 ">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 me-3 pb-0">
+											<div class="product-card2">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+											<div class="product-card2 pt-3">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="./assets/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 me-3 pb-0">
+											<div class="product-card2">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+											<div class="product-card2 pt-3">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 me-3 pb-0">
+											<div class="product-card2">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+											<div class="product-card2 pt-3">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 me-3 pb-0">
+											<div class="product-card2">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+											<div class="product-card2 pt-3">
+												<div class="product-image" style="height: auto;">
+													<span class="discount-tag">50% off</span> <img
+														class="w-100" src="/img/place1.jpg " alt="" />
+													<button class="card-btn">add to wishlist</button>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="container-fluid footer p-0">
+			<div class="row w-100 p-5">
+				<div class="col-3">
+					<div class="footer-logo ">Logo</div>
+					<p>Công Viên Phần Mềm Quang Trung Quận 12 TpHCM</p>
+
+					<p>Nhận đặt hàng trực tuyến và giao hàng tận nơi. KHÔNG hỗ trợ
+						đặt mua và nhận hàng trực tiếp tại văn phòng cũng như tất cả Hệ
+						Thống trên toàn quốc</p>
+
+					<div class="footer-contact">
+						<i class="ti-facebook"></i> <i class="ti-instagram"></i> <i
+							class="ti-youtube"></i> <i class="ti-twitter-alt"></i> <i
+							class="ti-pinterest"></i>
+					</div>
+
+				</div>
+				<div class="col-3 ">
+					<div class="footer-winget">
+						<div class="footer-label ps-3">
+							DỊCH VỤ
+							<ul class="footer-list">
+								<li><a href="">Điều khoản sử dụng</a></li>
+								<li><a href="">Giới thiệu</a></li>
+								<li><a href="">Hệ thống trung tâm - nhà sách</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="col-3">
+					<div class="footer-label ps-3">
+						HỖ TRỢ
+
+						<ul class="footer-list">
+							<li><a href="">Chính sách đổi - trả - hoàn tiền</a></li>
+							<li><a href="">Chính sách vận chuyển</a></li>
+							<li><a href="">Phương thức thanh toán và xuất HĐ</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="footer-label ps-3">
+						TÀI KHOẢN CỦA TÔI
+
+						<ul class="footer-list">
+							<li><a href="">Lịch sử mua hàng</a></li>
+							<li><a href="">Chi tiết tài khoản</a></li>
+							<li><a href="">Thay đổi địa chỉ khách hàng</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Bootstrap JavaScript Libraries -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+		crossorigin="anonymous"></script>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+		integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+		crossorigin="anonymous"></script>
+	<script>
 
     const productContainers = [
       ...document.querySelectorAll(".product-container"),
@@ -763,7 +632,7 @@
 
     var boxElement = document.getElementById('my-navbar');
 
-    window.onscroll = function () {
+    window.onscroll = function() {
       if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
         boxElement.style.top = "0px";
         boxElement.style.display = "block";

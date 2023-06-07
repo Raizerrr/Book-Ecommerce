@@ -2,11 +2,14 @@ package fpoly.edu.assignment_java5.respository;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import fpoly.edu.assignment_java5.identity.Book;
+import fpoly.edu.assignment_java5.identity.Category;
 
 public interface BookRepository extends JpaRepository<Book, Long> {
 	
@@ -30,6 +33,14 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 			+ "FROM Book bk "
 			+ "WHERE bk.id = :bkid")
 	Book getBookById(@Param("bkid") Long bkid);
+	
+	@Query("SELECT bk from Book bk "
+			+ "ORDER BY bk.price ASC "
+			+ "LIMIT 12	")
+	List<Book> getLowestPriceBook();
+	
+	
+	List<Book> findByCategory(Category category);
 	
 	
 	

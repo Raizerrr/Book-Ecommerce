@@ -7,10 +7,8 @@ import fpoly.edu.assignment_java5.identity.Book;
 public interface BookService {
 	
 	public List<Book> getAllBooks();
-	
-	public List<Book> getBookListByCategory();
-	
-	public List<Book> getBookListByKeyword();
+		
+	public List<Book> getBookListByKeyword(String keyword);
 	
 	public void insertBook(Book paramBook);
 	
@@ -22,6 +20,14 @@ public interface BookService {
 	
 	public List<Book> getBestSellerBooks();
 
-	Book getBookById(Long id);
+	public Book getBookById(Long id);
+	
+	public List<Book> getTopTrendingList();
+
+	List<Book> getBookListByCategory(String categoryName);
+
+	List<Book> getAllBookToPage(int bookAmount, int pageOption) throws Exception;
+	
+	
 	
 }
