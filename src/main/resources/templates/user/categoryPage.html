@@ -11,8 +11,7 @@
 
 <!-- css and fonts tag -->
 <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet"
-	href="/fonts/themify-icons-font/themify-icons/themify-icons.css">
+<link rel="stylesheet" href="/fonts/themify-icons-font/themify-icons/themify-icons.css">
 
 <!-- Bootstrap CSS v5.2.1 -->
 <link
@@ -20,145 +19,156 @@
 	rel="stylesheet"
 	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
 	crossorigin="anonymous">
-
+	
 </head>
 
 <body>
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
 
 	<header>
 		<nav
-			class="navbar my-navbar navbar-expand-lg navbar-light position-fixed"
-			id="my-navbar" style="width: 100%">
-			<div class="container-fluid">
-				<a href="/index/home">Logo</a>
-				<button class="navbar-toggler text-white border-0"
-					style="box-shadow: none;" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<i class="ti-menu"></i>
-				</button>
-				<div class="collapse w-75 dropMenuBarWraper navbar-collapse"
-					style="flex-grow: 0; justify-content: flex-end;"
-					id="navbarSupportedContent">
-					<ul class="navbar-nav dropMenuBar mb-lg-0">
-
-						<form th:action="@{/book/querySearch}"
-							class="d-flex searchForm position-relative" method="get">
-							<input class="form-control header-input me-5"
-								th:name="searchInput" style="padding: 10px" type="search"
-								placeholder="Search" aria-label="Search" />
-							<button th:name="action"
-								class="btn searchBtn-fixed position-absolute fixed-search-button"
-								type="submit">
-								<i class="ti-search"></i>
-							</button>
-						</form>
-
-						<li class="nav-item-fixed"><a class="nav-link"
-							style="font-weight: 600" aria-current="page" href="#"> <i
-								class="ti-bell"></i> Notification
-						</a></li>
-						<li class="nav-item-fixed"><a class="nav-link"
-							style="font-weight: 600" href="#"> <i
-								class="ti-shopping-cart"></i> Cart
-						</a></li>
-						<li class="nav-item-fixed dropdown"><a
-							class="nav-link dropdown-toggle" style="font-weight: 600"
-							href="#" id="navbarDropdown" role="button"
-							data-bs-toggle="dropdown" aria-expanded="false"> <i
-								class="ti-archive"></i> Category
-						</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" style="font-weight: 600"
-									href="#">Action</a></li>
-								<li><a class="dropdown-item" style="font-weight: 600"
-									href="#">Another action</a></li>
-								<li>
-									<hr class="dropdown-divider" />
-								</li>
-								<li><a class="dropdown-item" style="font-weight: 600"
-									href="#">Something else here</a></li>
-							</ul></li>
-						<li class="nav-item-fixed"><a class="nav-link"
-							style="font-weight: 600" href="#"> <i class="ti-user"></i>
-								Account
-						</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-
-
-
-		<nav class="navbar header-nav navbar-expand-lg navbar-light  px-5"
-			id="header-navbar">
-			<div class="container-fluid px-5">
-				<div
-					class="container-fluid d-flex p-3 m-0 w-100 justify-content-between align-items-center">
-					<a class="navbar-brand p-1 m-1 me-md-5 pe-md-5" href="/index/home">Logo</a>
-
-					<div class="collapse navbar-collapse search-container"
-						id="navbarSupportedContent1">
-
-						<form th:action="@{/book}" class="d-flex header-menu-search"
-							method="get">
-							<input class="form-control header-input rounded-0" type="search"
-								placeholder="Search" aria-label="Search" name="keyword">
-							<button
-								class="btn btn-outline-success rounded-0 header-search-button"
-								type="submit" formaction="/book/querySearch" formmethod="get">
-								Search</button>
-						</form>
-
-
-
-						<i class="ti-user nav-item" style="font-weight: 900;"></i>
-					</div>
-					<button class="navbar-toggler border-0" style="box-shadow: none;"
-						type="button" data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent1"
+				class="navbar my-navbar navbar-expand-lg navbar-light position-fixed"
+				id="my-navbar" style="width: 100%">
+				<div class="container-fluid">
+					<a href="/index/home"> <img
+						src="https://i.ibb.co/CJJq34Z/7a03f6d35e97450e89bfc82a128f8041.png"
+						class="w-25 h-25" alt="..." /> FULI
+					</a>
+					<button class="navbar-toggler text-white border-0"
+						style="box-shadow: none;" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
 						aria-controls="navbarSupportedContent" aria-expanded="false"
 						aria-label="Toggle navigation">
 						<i class="ti-menu"></i>
 					</button>
+					<div class="collapse w-75 dropMenuBarWraper navbar-collapse"
+						style="flex-grow: 0; justify-content: flex-end;"
+						id="navbarSupportedContent">
+						<ul class="navbar-nav dropMenuBar mb-lg-0">
 
+							<form th:action="@{/index/home}"
+								class="d-flex searchForm position-relative" method="get">
+								<input class="form-control header-input me-5" name="keyword"
+									style="padding: 10px" type="search"
+									placeholder="Search Your Book" aria-label="Search" />
+								<button
+									class="btn searchBtn-fixed position-absolute fixed-search-button"
+									formaction="/book/querySearch/0" formmethod="get">
+									<i class="ti-search"></i>
+								</button>
+							</form>
 
-				</div>
-				<hr width="100%">
-
-
-				<div class="container-fluid">
-					<div class="collapse navbar-collapse" id="navbarSupportedContent1">
-						<ul class="navbar-nav navbar-menu me-auto mb-2 mb-lg-0">
-							<li class="nav-item pe-4"><a class="nav-link"
-								aria-current="page" href="/index/home">Home</a></li>
-							<li class="nav-item pe-4"><a class="nav-link" href="#">Notification</a>
-							</li>
-							<li class="nav-item pe-4 dropdown"><a
-								class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-								role="button" data-bs-toggle="dropdown" aria-expanded="false">
-									Shop </a>
-								<ul class="dropdown-menu "
-									style="top: 108%; left: -175%; width: 1032px;"
-									aria-labelledby="navbarDropdown">
-									<li><a class="dropdown-item" href="#">Action</a></li>
-									<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li class="nav-item-fixed"><a class="nav-link"
+								style="font-weight: 600" aria-current="page" href="#"> <i
+									class="ti-bell"></i> Notification
+							</a></li>
+							<li class="nav-item-fixed"><a class="nav-link"
+								style="font-weight: 600" href="#"> <i
+									class="ti-shopping-cart"></i> Cart
+							</a></li>
+							<li class="nav-item-fixed dropdown"><a
+								class="nav-link dropdown-toggle" style="font-weight: 600"
+								href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false"> <i
+									class="ti-archive"></i> Category
+							</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item" style="font-weight: 600"
+										href="#">Action</a></li>
+									<li><a class="dropdown-item" style="font-weight: 600"
+										href="#">Another action</a></li>
 									<li>
-										<hr class="dropdown-divider">
+										<hr class="dropdown-divider" />
 									</li>
-									<li><a class="dropdown-item" href="#">Something else
-											here</a></li>
+									<li><a class="dropdown-item" style="font-weight: 600"
+										href="#">Something else here</a></li>
 								</ul></li>
-							<li class="nav-item pe-4"><a class="nav-link" href="#">Cart</a>
-							</li>
+							<li class="nav-item-fixed"><a class="nav-link"
+								data-bs-toggle="offcanvas" aria-controls="user-offcanvas"
+								style="font-weight: 600" href="#user-offcanvas"> <i
+									class="ti-user"></i> Account
+							</a></li>
 						</ul>
-
 					</div>
 				</div>
+			</nav>
 
-			</div>
-		</nav>
+
+			<nav class="navbar header-nav navbar-expand-lg navbar-light  px-5"
+				id="header-navbar">
+				<div class="container-fluid px-5">
+					<div
+						class="container-fluid d-flex p-3 m-0 w-100 justify-content-between align-items-center">
+						<a class="navbar-brand p-1 m-1 me-md-5 pe-md-5" href="/index/home">
+							<img
+							src="https://i.ibb.co/CJJq34Z/7a03f6d35e97450e89bfc82a128f8041.png"
+							class="w-25 h-25" alt="..." /> FULI
+						</a>
+
+						<div class="collapse navbar-collapse search-container"
+							id="navbarSupportedContent1">
+
+							<form th:action="@{/index/home}"
+								class="d-flex header-menu-search" method="get">
+								<input class="form-control header-input rounded-0" type="search"
+									placeholder="Search" aria-label="Search" name="keyword"
+									th:value="${keyword}">
+								<button
+									class="btn btn-outline-success rounded-0 header-search-button"
+									type="submit" formaction="/book/querySearch/0" formmethod="get">
+									Search</button>
+							</form>
+
+							<a href="#user-offcanvas" class="user-icon" role="button"
+								aria-controls="user-offcanvas" data-bs-toggle="offcanvas"><i
+								class="ti-user nav-item" style="font-weight: 900;"></i></a>
+						</div>
+						<button class="navbar-toggler border-0" style="box-shadow: none;"
+							type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent1"
+							aria-controls="navbarSupportedContent" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<i class="ti-menu"></i>
+						</button>
+
+
+					</div>
+					<hr width="100%">
+
+
+					<div class="container-fluid">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+							<ul class="navbar-nav navbar-menu me-auto mb-2 mb-lg-0">
+								<li class="nav-item"><a class="nav-link"
+									aria-current="page" href="/index/home">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">Notification</a>
+								</li>
+								<li class="nav-item dropdown"><a
+									class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Shop </a>
+									<ul class="dropdown-menu "
+										style="top: 108%; left: -175%; width: 1032px;"
+										aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li>
+											<hr class="dropdown-divider">
+										</li>
+										<li><a class="dropdown-item" href="#">Something else
+												here</a></li>
+									</ul></li>
+								<li class="nav-item"><a class="nav-link"
+									href="/payment/views">Cart</a></li>
+							</ul>
+
+						</div>
+					</div>
+
+				</div>
+			</nav>
 	</header>
 
 	<main>
@@ -172,23 +182,34 @@
 						<div class="row">
 							<div class="col-1">
 								<button class="all-button" id="all-button"
-									onclick="location.href = '/book/querySearch?keyword=All';">All</button>
+									onclick="location.href = '/book/querySearch/0?keyword=All';">All</button>
 							</div>
 							<div class="col-2 sort-title">
 								<h2>sort by :</h2>
 							</div>
+							
 							<div class="col-3">
-								<select id="alphabet-sort" class="alphabet-sort">
-									<option class="option1" value="">A-Z Ascending</option>
-									<option value="">A-Z Decrese</option>
-								</select>
+								<form action="" class="w-100 h-100" id="sortNameForm" method="get">
+									<select id="alphabet-sort" class="alphabet-sort" name="nameOrder" onchange="this.form.submit();">
+										<option class="option1" value="na" th:selected="${nameOrder == 'na'}">A-Z Ascending</option>
+										<option value="nd" th:selected="${nameOrder == 'nd'}">A-Z Decrese</option>
+									</select>
+								
+								</form>
+								
 							</div>
+							
 							<div class="col-3">
-								<select class="cost-sort" id="cost-sort">
-									<option value="">Low to High</option>
-									<option value="">High to low</option>
-								</select>
+								<form action="" class="w-100 h-100" id="sortPriceForm" method="get">
+									<select class="cost-sort" id="cost-sort" name="priceOrder" onchange="this.form.submit();">
+										<option th:value="pa" th:selected="${priceOrder == 'pa'}" >Low to High</option>
+										<option th:value="pd" th:selected="${priceOrder == 'pd'}" >High to low</option>
+									</select>
+								
+								</form>
+								
 							</div>
+							
 							<div class="col-3">
 								<select id="time-sort" class="time-sort">
 									<option value="">Lasted</option>
@@ -202,17 +223,21 @@
 					<!-- category list start here -->
 					<div class="col-3">
 						<div class="search-by-cost">
-							<div class="d-flex justify-content-between">
-								<div class="">
-									From <input class="min-cost-input me-3" placeholder="$"
-										type="text" name="min-cost" id="min-cost">
+							<form action="" method="get" id="filterPriceForm">
+								
+								<div class="d-flex justify-content-between">
+									<div class="">
+										From <input class="min-cost-input me-3" placeholder="$" value="0"
+											type="text" name="minPrice" id="min-cost">
+									</div>
+									<div class="">
+										To <input class="max-cost-input me-3" placeholder="$" value="5000000"
+										type="text" name="maxPrice" id="max-cost">
+									</div>
 								</div>
-								<div class="">
-									To <input class="max-cost-input me-3" placeholder="$"
-										type="text" name="max-cost" id="max-cost">
-								</div>
-							</div>
-							<button id="cost-fillter-button" class="cost-fillter-button">Fillter</button>
+								<button id="cost-fillter-button" class="cost-fillter-button" type="submit">Fillter</button>
+							
+							</form>
 						</div>
 
 						<div class="seach-by-tag mb-3">
@@ -224,6 +249,7 @@
 									<i class="ti-plus"></i>
 								</button>
 							</div>
+							
 							<div class="collapse" id="tag-collapse">
 								<ul class="tag-ul">
 									<li><input type="checkbox" class="me-2 ckb"></li>
@@ -235,24 +261,33 @@
 								</ul>
 							</div>
 						</div>
+						
 						<div class="search-by-category mb-3">
 
 							<div class="d-flex align-items-center justify-content-between">
-								<h2>Category</h2>
+								<h2 class="catName">Category</h2>
 								<button class="category-button" type="button"
 									data-bs-toggle="collapse" data-bs-target="#category-collapse"
 									aria-expanded="false" aria-controls="category-collapse">
 									<i class="ti-plus"></i>
 								</button>
 							</div>
+
 							<div class="collapse" id="category-collapse">
 								<ul class="category-ul">
-									<li><input type="checkbox" class="me-2 ckb">Shota</li>
-									<li><input type="checkbox" class="me-2 ckb">Loli</li>
-									<li><input type="checkbox" class="me-2 ckb">Agheo</li>
-									<li><input type="checkbox" class="me-2 ckb"></li>
-									<li><input type="checkbox" class="me-2 ckb"></li>
-									<li><input type="checkbox" class="me-2 ckb"></li>
+									<th:block th:each="item : ${categoryList}">
+
+										<li>
+											<input 
+												type="checkbox" 
+												class="me-2 ckb categoryListCheck" 
+												th:name="${item.name}" th:text="${item.name}"
+												th:checked="${checkedValues.contains(item.name)}"	
+											>
+										</li>
+											
+									</th:block>
+
 								</ul>
 							</div>
 						</div>
@@ -264,12 +299,12 @@
 					<div class="col-9 mt-4">
 						<div class="row product-list-wrapper pb-4">
 
-							<th:block th:each="item : ${bookCategoryList}">
+							<th:block th:each="item : ${bookList}">
 
 								<div class="col-4 product-list mb-4">
 									<div class="prodct-wrapper">
 										<div class="prodct-list-img w-100">
-											<img th:src="${item.image}" class="w-100" alt="">
+											<a th:href="@{|/book/${item.id}|}"><img th:src="${item.image}" class="w-100" alt=""></a>
 										</div>
 										<div class="prodct-list-inf w-100">
 											<a class="prodct-button-name" th:href="@{|/book/${item.id}|}">
@@ -287,11 +322,10 @@
 
 						</div>
 
-
 					</div>
 
 
-					<th:block th:if="${#lists.size(bookCategoryList) > 12}">
+					<th:block th:if="${#lists.size(bookPages) > 12}">
 
 						<div class="trans-pages">
 							<ul class="d-flex trans-pages-ul justify-content-center">
@@ -300,15 +334,13 @@
 								<li><a href=""> <i class="ti-angle-left"></i>
 								</a></li>
 
-								<th:block th:each="i : ${#numbers.sequence(bookCategoryList.size() - 1, 0, -1)}">
+								<th:block
+									th:each="i : ${#numbers.sequence(0, bookPages.size()/12)}">
 
-									<li><a href="" th:text="${i}"></a></li>
+									<li><a th:href="@{|/book/querySearch/${i}${queryString}|}"
+										th:text="${i+1}"></a></li>
 
 								</th:block>
-
-
-								
-								
 
 								<li><a href=""> <i class="ti-angle-right"></i>
 								</a></li>
@@ -316,16 +348,17 @@
 								</a></li>
 							</ul>
 						</div>
+
+
+					</th:block>
+					<!-- product list end here -->
+
+
 				</div>
-
-				</th:block>
-				<!-- product list end here -->
-
-
 			</div>
 		</div>
-		</div>
 	</main>
+	
 	<footer>
 		<div class="container-fluid footer p-0">
 			<div class="row w-100 p-5">
@@ -398,7 +431,7 @@
         </script>
 
 	<script>
-
+	
         const productContainers = [
             ...document.querySelectorAll(".product-container"),
         ];
@@ -456,6 +489,67 @@
 
             }
         }
+        
+        //ajax category
+        
+        var urlBefore = window.location.href;
+        
+        var checkedBoxes;
+        
+        $("input.categoryListCheck").click(function(e) {
+			var usp = new URLSearchParams();
+			$(".category-ul").each(function() {
+				   var category = $(document).find('.catName').text().trim();
+				   checkedBoxes = $(this).find('input.categoryListCheck:checked');				      				      
+				   var values = Array.from(checkedBoxes, cb => cb.name).join(',');
+				   if (values !== "") {
+				       usp.append(category, values);
+				   }
+			});
+			
+			var queryString;
+			
+			if(checkedBoxes.length > 0){
+				queryString = "&" + usp.toString(); 
+				console.log(checkedBoxes);
+			}else {
+				
+				console.log(urlBefore);
+				
+				queryString = ""
+				
+				console.log(urlBefore.substring(0, urlBefore.indexOf("&")));
+			} 
+						
+			console.log("URL?" + queryString);
+				    			    
+			window.history.pushState('page2', 'Title', urlBefore + queryString);
+					
+			console.log(urlBefore + queryString)
+				    
+			$.ajax({
+				 type: 'GET',
+				 url: urlBefore + queryString, 
+				 data: urlBefore + queryString,
+				 success: function(response) {
+					 
+				 }
+			});
+			 
+			 
+			});
+        
+        //price sort form 
+        
+        var form = document.getElementById("sortPriceForm"); // Replace "myForm" with the ID of your form
+		form.action = window.location.href;
+        
+        var form2 = document.getElementById("sortNameForm"); 
+        form2.action = window.location.href; 
+        
+        var form3 = document.getElementById("filterPriceForm"); 
+        form3.action = window.location.href;
+        
     </script>
 </body>
 

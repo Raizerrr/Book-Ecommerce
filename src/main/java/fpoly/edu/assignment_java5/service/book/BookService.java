@@ -1,6 +1,7 @@
 package fpoly.edu.assignment_java5.service.book;
 
 import java.util.List;
+import java.util.Optional;
 
 import fpoly.edu.assignment_java5.identity.Book;
 
@@ -26,8 +27,11 @@ public interface BookService {
 
 	List<Book> getBookListByCategory(String categoryName);
 
-	List<Book> getAllBookToPage(int bookAmount, int pageOption) throws Exception;
+	List<Book> getAllBookToPage(int bookAmount, int pageOption);
+
+	List<Book> getBooksByKeywordToPage(int bookAmount, int pageOption, String keyword);
 	
+	List<Book> getBooksByPriceRangeToPage(int bookAmount, int pageOption, Long min, Long max);
 	
-	
+	List<Book> getBookListByCategoryString(int bookAmount, int pageOption, String catString);
 }

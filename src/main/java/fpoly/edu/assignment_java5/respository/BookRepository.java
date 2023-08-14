@@ -39,10 +39,21 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 			+ "LIMIT 12	")
 	List<Book> getLowestPriceBook();
 	
+	@Query("SELECT bk "
+			+ "FROM Book bk "
+			+ "JOIN Category ct "
+			+ "WHERE ct.name = :categoryName")
+	List<Book> getBookListByCategoryName(@Param("categoryName") String categoryName);
 	
-	List<Book> findByCategory(Category category);
+	@Query("SELECT bk "
+			+ "FROM Book bk "
+			+ "WHERE bk.price between :min and :max")
+	List<Book> getBookListByPriceRange(@Param("min") Long min, @Param("max") Long max);
 	
-	
-	
+	@Query("SELECT bk "
+			+ "FROM Book bk "
+			+ "JOIN Category ct "
+			+ "WHERE ct.name IN(:catString)")
+	List<Book> getBookListByCategoryString(@Param("catString") String catString);
 	
 }

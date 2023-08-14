@@ -1,0 +1,16 @@
+.newbook-header {
+  line-height: 1.5rem;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.submit-newbook-btn {
+  padding: 8px 20px;
+  background-color: #3a57e8;
+  color: #fff;
+  border: 1px solid #000;
+  line-height: 1.5rem;
+  border-radius: 2px;
+  text-transform: capitalize;
+}

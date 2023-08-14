@@ -12,9 +12,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CartItem {
-	private int bookId;
+	private Long bookId;
 	private String bookName;
-	private double bookPrice;
-	private int qty = 1;
+	private String bookImage;
+	private Long bookPrice;
+	private long qty = 1;
 		
 }

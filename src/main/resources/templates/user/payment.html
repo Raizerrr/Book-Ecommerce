@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
     <title>Title</title>
@@ -8,139 +8,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- css and fonts tag -->
-    <link rel="stylesheet" th:href="@{/user/css/style.css}">
-    <link rel="stylesheet" th:href="@{/user/fonts/themify-icons-font/themify-icons/themify-icons.css}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/fonts/themify-icons-font/themify-icons/themify-icons.css">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+	
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	
 </head>
 
 <body>
     <header>
-        <nav class="navbar my-navbar navbar-expand-lg navbar-light position-fixed" id="my-navbar" style="width: 100%">
-            <div class="container-fluid">
-                <a href="">Logo</a>
-                <button class="navbar-toggler border-0" style="box-shadow: none;" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="ti-menu"></i>
-                </button>
-                <div class="collapse w-75 dropMenuBarWraper navbar-collapse"
-                    style="flex-grow: 0; justify-content: flex-end;" id="navbarSupportedContent">
-                    <ul class="navbar-nav dropMenuBar mb-lg-0">
-                        <form class="d-flex searchForm position-relative">
-                            <input class="form-control header-input me-5" style="padding: 10px" type="search"
-                                placeholder="Search" aria-label="Search" />
-                            <button class="btn searchBtn btn-outline-success position-absolute fixed-search-button"
-                                type="submit">
-                                <i class="ti-search"></i>
-                            </button>
-                        </form>
-                        <li class="nav-item">
-                            <a class="nav-link" style="font-weight: 600" aria-current="page" href="#">
-                                <i class="ti-bell"></i>
-                                Notification</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="font-weight: 600" href="#">
-                                <i class="ti-shopping-cart"></i>
-                                Cart</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" style="font-weight: 600" href="#" id="navbarDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="ti-archive"></i>
-                                Category
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li>
-                                    <a class="dropdown-item" style="font-weight: 600" href="#">Action</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" style="font-weight: 600" href="#">Another action</a>
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" style="font-weight: 600" href="#">Something else here</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" style="font-weight: 600" href="#">
-                                <i class="ti-user"></i>
-                                Account
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+       <nav
+				class="navbar my-navbar navbar-expand-lg navbar-light position-fixed"
+				id="my-navbar" style="width: 100%">
+				<div class="container-fluid">
+					<a href="/index/home"> <img
+						src="https://i.ibb.co/CJJq34Z/7a03f6d35e97450e89bfc82a128f8041.png"
+						class="w-25 h-25" alt="..." /> FULI
+					</a>
+					<button class="navbar-toggler text-white border-0"
+						style="box-shadow: none;" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<i class="ti-menu"></i>
+					</button>
+					<div class="collapse w-75 dropMenuBarWraper navbar-collapse"
+						style="flex-grow: 0; justify-content: flex-end;"
+						id="navbarSupportedContent">
+						<ul class="navbar-nav dropMenuBar mb-lg-0">
+
+							<form th:action="@{/index/home}"
+								class="d-flex searchForm position-relative" method="get">
+								<input class="form-control header-input me-5" name="keyword"
+									style="padding: 10px" type="search"
+									placeholder="Search Your Book" aria-label="Search" />
+								<button
+									class="btn searchBtn-fixed position-absolute fixed-search-button"
+									formaction="/book/querySearch/0" formmethod="get">
+									<i class="ti-search"></i>
+								</button>
+							</form>
+
+							<li class="nav-item-fixed"><a class="nav-link"
+								style="font-weight: 600" aria-current="page" href="#"> <i
+									class="ti-bell"></i> Notification
+							</a></li>
+							<li class="nav-item-fixed"><a class="nav-link"
+								style="font-weight: 600" href="#"> <i
+									class="ti-shopping-cart"></i> Cart
+							</a></li>
+							<li class="nav-item-fixed dropdown"><a
+								class="nav-link dropdown-toggle" style="font-weight: 600"
+								href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false"> <i
+									class="ti-archive"></i> Category
+							</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item" style="font-weight: 600"
+										href="#">Action</a></li>
+									<li><a class="dropdown-item" style="font-weight: 600"
+										href="#">Another action</a></li>
+									<li>
+										<hr class="dropdown-divider" />
+									</li>
+									<li><a class="dropdown-item" style="font-weight: 600"
+										href="#">Something else here</a></li>
+								</ul></li>
+							<li class="nav-item-fixed"><a class="nav-link"
+								data-bs-toggle="offcanvas" aria-controls="user-offcanvas"
+								style="font-weight: 600" href="#user-offcanvas"> <i
+									class="ti-user"></i> Account
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 
 
-        <nav class="navbar header-nav navbar-expand-lg navbar-light  px-5" id="header-navbar">
-            <div class="container-fluid px-5">
-                <div class="container-fluid d-flex p-3 m-0 w-100 justify-content-between align-items-center">
-                    <a class="navbar-brand p-1 m-1 me-md-5 pe-md-5" href="#">Logo</a>
+			<nav class="navbar header-nav navbar-expand-lg navbar-light  px-5"
+				id="header-navbar">
+				<div class="container-fluid px-5">
+					<div
+						class="container-fluid d-flex p-3 m-0 w-100 justify-content-between align-items-center">
+						<a class="navbar-brand p-1 m-1 me-md-5 pe-md-5" href="/index/home">
+							<img
+							src="https://i.ibb.co/CJJq34Z/7a03f6d35e97450e89bfc82a128f8041.png"
+							class="w-25 h-25" alt="..." /> FULI
+						</a>
 
-                    <div class="collapse navbar-collapse search-container" id="navbarSupportedContent1">
+						<div class="collapse navbar-collapse search-container"
+							id="navbarSupportedContent1">
 
-                        <form class="d-flex header-menu-search">
-                            <input class="form-control header-input rounded-0" type="search" placeholder="Search"
-                                aria-label="Search">
-                            <button class="btn btn-outline-success rounded-0 header-search-button"
-                                type="submit">Search</button>
-                        </form>
-                        <i class="ti-user nav-item" style="font-weight: 900;"></i>
-                    </div>
-                    <button class="navbar-toggler border-0" style="box-shadow: none;" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="ti-menu"></i>
-                    </button>
+							<form th:action="@{/index/home}"
+								class="d-flex header-menu-search" method="get">
+								<input class="form-control header-input rounded-0" type="search"
+									placeholder="Search" aria-label="Search" name="keyword"
+									th:value="${keyword}">
+								<button
+									class="btn btn-outline-success rounded-0 header-search-button"
+									type="submit" formaction="/book/querySearch/0" formmethod="get">
+									Search</button>
+							</form>
+
+							<a href="#user-offcanvas" class="user-icon" role="button"
+								aria-controls="user-offcanvas" data-bs-toggle="offcanvas"><i
+								class="ti-user nav-item" style="font-weight: 900;"></i></a>
+						</div>
+						<button class="navbar-toggler border-0" style="box-shadow: none;"
+							type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent1"
+							aria-controls="navbarSupportedContent" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<i class="ti-menu"></i>
+						</button>
 
 
-                </div>
-                <hr width="100%">
+					</div>
+					<hr width="100%">
 
 
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-                        <ul class="navbar-nav navbar-menu me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Notification</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Shop
-                                </a>
-                                <ul class="dropdown-menu " style="top: 108%;left: -175%;width: 1032px;"
-                                    aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Cart</a>
-                            </li>
-                        </ul>
+					<div class="container-fluid">
+						<div class="collapse navbar-collapse" id="navbarSupportedContent1">
+							<ul class="navbar-nav navbar-menu me-auto mb-2 mb-lg-0">
+								<li class="nav-item"><a class="nav-link"
+									aria-current="page" href="/index/home">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">Notification</a>
+								</li>
+								<li class="nav-item dropdown"><a
+									class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Shop </a>
+									<ul class="dropdown-menu "
+										style="top: 108%; left: -175%; width: 1032px;"
+										aria-labelledby="navbarDropdown">
+										<li><a class="dropdown-item" href="#">Action</a></li>
+										<li><a class="dropdown-item" href="#">Another action</a></li>
+										<li>
+											<hr class="dropdown-divider">
+										</li>
+										<li><a class="dropdown-item" href="#">Something else
+												here</a></li>
+									</ul></li>
+								<li class="nav-item"><a class="nav-link"
+									href="/payment/views">Cart</a></li>
+							</ul>
 
-                    </div>
-                </div>
+						</div>
+					</div>
 
-            </div>
-        </nav>
+				</div>
+			</nav>
     </header>
     <main>
 
@@ -176,35 +197,41 @@
                                 <th>Total</th>
                             </thead>
                             <tbody>
-                                <tr class="py-3">
-                                    <td class="d-flex pro-inf align-items-center">
-                                        <div class="product-payment-img pe-2"><img src="" alt="" class="w-100 h-100">
+                            	
+                            	<th:block th:each="item : ${CART_ITEMS}">
+                            	
+                            		 <tr class="py-3">
+                                    	<td class="d-flex pro-inf align-items-center">
+                                        <div class="product-payment-img pe-2"><img th:src="${item.bookImage}" alt="" class="w-100 h-100">
                                         </div>
-                                        <div class="product-payment-title">How to get Gradient Rank in Valorant </div>
-                                    </td>
-                                    <td><span id="payment-price" class="payment-price">$30.00</span></td>
-                                    <td><span id="payment-quantity" class="payment-quantity">1</span></td>
-                                    <td><span id="payment-total" class="payment-total">$30.00</span></td>
-                                </tr>
-                                <tr class="py-3">
-                                    <td class="d-flex pro-inf align-items-center">
-                                        <div class="product-payment-img pe-2"><img src="" alt="" class="w-100 h-100">
-                                        </div>
-                                        <div class="product-payment-title">How to get Gradient Rank in Valorant </div>
-                                    </td>
-                                    <td><span id="payment-price" class="payment-price">$30.00</span></td>
-                                    <td><span id="payment-quantity" class="payment-quantity">1</span></td>
-                                    <td><span id="payment-total" class="payment-total">$30.00</span></td>
-                                </tr>
+                                        <div class="product-payment-title" th:text="${item.bookName}"> </div>
+                                    	</td>
+                                    	<td><span id="payment-price" class="payment-price" th:if="${item.bookPrice >= 1000}"
+												th:text="${item.bookPrice / 1000} + '.' + ${item.bookPrice % 10} + ${item.bookPrice % 100 / 10} + ${item.bookPrice % 1000 / 100} + 'đ'"></span></td>
+                                    	<td><span id="payment-quantity" class="payment-quantity">1</span></td>
+                                    	<td><span id="payment-total" class="payment-total" th:if="${item.bookPrice * item.qty >= 1000}"
+												th:text="${item.bookPrice * item.qty / 1000} + '.' + ${item.bookPrice * item.qty % 10} + ${item.bookPrice * item.qty % 100 / 10} + ${item.bookPrice * item.qty % 1000 / 100} + 'đ'"></span></td>
+                                		</tr>
+                            	
+                            	</th:block>
+                            	
+                            	
+                            	
+                            	
+                            
+                               
+                               
 
                             </tbody>
                         </table>
                     </div>
                     <div class="total-final py-3" id="total-final">
-                        Total of <span>1</span> product : <span>$30.00</span>
+                        Total of <span th:text="${COUNTBOOK}"></span> product : <span th:if="${TOTAL >= 1000}"
+												th:text="${TOTAL / 1000} + '.' + ${TOTAL % 10} + ${TOTAL % 100 / 10} + ${TOTAL % 1000 / 100} + 'đ'"></span>
                     </div>
                 </div>
             </section>
+            
             <section class="pt-3">
                 <div class="container voucher-sec px-2">
                     <div class="voucher py-4 d-flex justify-content-between">
@@ -215,7 +242,7 @@
                         <button id="voucher" class="voucher-btn">Choose Voucher</button>
                     </div>
                     ` <div class="container buy-final d-flex justify-content-end">
-                        <button class="buy-final-button  my-3" id="buy-final-button"> Buy</button>
+                        <button class="buy-final-button  my-3" id="buy-final-button" onclick="swal('Thank You', 'Ordering Your Book', 'success');"> Buy</button>
                     </div>
 
                 </div>
